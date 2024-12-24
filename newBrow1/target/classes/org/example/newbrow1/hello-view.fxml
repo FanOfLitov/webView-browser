@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-border-color: black; -fx-min-width: 100%; -fx-min-height: 100%;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.newbrow1.HelloController">
+    <children>
+        <VBox fx:id="myVBox" alignment="CENTER" prefHeight="46.0" prefWidth="550.0" spacing="20.0" style="-fx-background-color: #0000; -fx-background-size: 100%;">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+            <children>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Button fx:id="searchButton" mnemonicParsing="false" onAction="#onSearchButtonClick" prefHeight="27.0" prefWidth="70.0" style="-fx-background-color: #99FF33; -fx-border-color: black; -fx-font-style: italic; -fx-font-weight: bold; -fx-border-radius: 5; -fx-border-radius: 5;" text="Search" textFill="WHITE">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <effect>
+                                <Glow />
+                            </effect>
+                        </Button>
+                        <TextField fx:id="searchField" prefHeight="20.0" prefWidth="150.0" />
+                        <Button fx:id="plusButton" mnemonicParsing="false" onAction="#onPlusButtonClick" styleClass="button-normal" text="+" textFill="#481515" />
+
+<!--                        <Button fx:id="plusButton" mnemonicParsing="false" onAction="#onPlusButtonClick" onDragOver="#onDrPlus" onMouseExited="#onMouseExited" styleClass="button-normal" text="+"  textFill="#481515"/>-->
+                        <Button fx:id="minusButton" mnemonicParsing="false" onAction="#onMinusButtonClick" styleClass="button-normal" text="-" textFill="#481515" />
+                        <Button fx:id="historyButton" mnemonicParsing="false" onAction="#onHistoryButtonClick" styleClass="button-normal" text="History" textFill="#481515" />
+                        <Button fx:id="settingsButton" mnemonicParsing="false" onAction="#onSettingsButtonClick" styleClass="button-normal" text="Settings" textFill="#481515" />
+                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#onBackButtonClick" styleClass="button-normal" text="⬅" textFill="#481515" />
+                  <Button fx:id="forwardButton" mnemonicParsing="false" onAction="#onForwardButtonClick" styleClass="button-normal" text="➠" textFill="#481515" />
+
+                        <Button fx:id="NoJSButton" mnemonicParsing="false" onAction="#onNoJs" styleClass="button-normal" text="NoJS" textFill="#481515" />
+                        <Button fx:id="restartButton" mnemonicParsing="false" onAction="#onRestartBUttonClick" styleClass="button-normal" text="⟲" textFill="#481515" />
+
+
+                        <Button fx:id="themeButton" mnemonicParsing="false" onAction="#settVBoxBackgroudColor" styleClass="button-normal" text="Theme" textFill="#481515" />
+
+                    </children>
+                </HBox>
+            </children>
+            <effect>
+                <ColorAdjust />
+            </effect>
+        </VBox>
+
+
+        <TabPane id="TabPane" fx:id="tabPageid" tabClosingPolicy="ALL_TABS">
+            <tabs>
+                <Tab text="Welcome Page">
+                    <content>
+                        <AnchorPane>
+                            <children>
+                                <WebView id="webWiew1" fx:id="welcomePage" layoutX="3.0" layoutY="-1.0" prefHeight="900.2" prefWidth="550.4" style="-fx-min-height: 100%;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+
+            </tabs>
+        </TabPane>
+    </children>
+</VBox>
